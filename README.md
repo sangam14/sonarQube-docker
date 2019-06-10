@@ -32,11 +32,11 @@ Get the Dockerfile:
 
 * By cloning: 
 ```bash 
-git clone https://github.com/pierDipi/sonarqube-scanner-docker.git
+git clone https://github.com/sangam14/sonarQube-docker.git
 ```
 * By adding as submodule:
 ```bash 
-git submodule add https://github.com/pierDipi/sonarqube-scanner-docker.git
+git submodule add https://github.com/sangam14/sonarQube-docker.git
 ```
 And then run the following commands in order to build the `sonar-scanner:3.2.0` image:
 
@@ -57,7 +57,7 @@ in order to wait sonarQube server to be up and running.
 Replace `$(pwd)/src` with your directory that you want analyze.
 
 ```bash
-docker run -it --rm --name sonar-scanner --link sonarqube -v $(pwd)/src:/sonar/app/src pierdipi/sonar-scanner:3.2.0
+docker run -it --rm --name sonar-scanner --link sonarqube -v $(pwd)/src:/sonar/app/src sangam14/sonar-scanner:3.2.0
 ```
 
 
@@ -79,7 +79,7 @@ services:
     ports:
       - "9000:9000"
   sonar-scanner:
-    image: pierdipi/sonar-scanner:3.2.0
+    image: sangam/sonar-scanner:3.2.0
     volumes:
       - ./src:/sonar/app/src
     restart: on-failure
