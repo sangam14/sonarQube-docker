@@ -1,6 +1,6 @@
 FROM centos:7
 
-LABEL maintainer="pierangelodipilato@gmail.com"
+LABEL maintainer="smbiradar14@gmail.com"
 
 ARG PROPS_FILE=sonar-scanner.properties
 
